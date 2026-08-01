@@ -1,0 +1,68 @@
+include: "Snakefile"
+
+rule all_no_db:
+    input:
+        expand("results/gex/{study}_{sample}_all_cells.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/gex/{study}_{sample}_B_cells.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/gex/{study}_{sample}_all.h5ad",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/gex/{study}_{sample}_b.h5ad",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/gex/{study}_{sample}_b_cell_embedding.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/gex/{study}_{sample}_b_marker_expression.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/gex_zarr/{study}_{sample}_b_zarr_manifest.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/gex_de/{study}_{sample}_clone_gene_expression_summary.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/bcr/{study}_{sample}_SHM_paired.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/bcr/{study}_{sample}_bcr.json",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/bcr/{study}_{sample}_clone.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/lineage/{study}_{sample}_lineage_edge.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/lineage/{study}_{sample}_lineage_tree.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/lineage/{study}_{sample}_lineage.json",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/repertoire/{study}_{sample}_vdj_usage.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/cdr3_network/{study}_{sample}_cdr3_edges.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/cdr3_network/{study}_{sample}_cdr3_nodes.tsv",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/cdr3_network/{study}_{sample}_cdr3_network.json",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        expand("results/cdr3_network/{study}_{sample}_cdr3_network_stats.json",
+               zip, study=STUDIES, sample=SAMPLE_NAMES)
+        +
+        ["results/repertoire/diversity.tsv"]
+        +
+        ["results/repertoire/public_clonotypes.tsv"]
+        +
+        ["results/repertoire/public_network.tsv"]
+        +
+        ["results/repertoire/clone_members.tsv"]

@@ -1,0 +1,31 @@
+name: xbcrdb-pipeline
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python>=3.10
+  - snakemake>=7
+  - pandas
+  - numpy
+  - scipy
+  - scanpy
+  - anndata
+  - leidenalg
+  - python-igraph
+  - zarr
+  - h5py
+  - networkx
+  - pyyaml
+  - psycopg2
+  - r-base
+  - r-dplyr
+  - r-ggplot2
+  - bioconductor-alakazam
+  - bioconductor-shazam
+  - r-dowser
+  - changeo
+  - igblast
+  - pip
+  - pip:
+      - celltypist

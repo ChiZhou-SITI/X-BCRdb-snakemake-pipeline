@@ -1,0 +1,2 @@
+sample_id	study	subject_id	tissue	disease	platform	n_cells	paired_BCR
+HC_1	SLE_Gao_2022	SLE_Gao_2022_HC_1	PBMC	Healthy	10X 5'	2015	True

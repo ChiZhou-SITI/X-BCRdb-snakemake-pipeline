@@ -1,0 +1,20 @@
+###############################################################################
+# Example configuration for X-BCRdb Snakemake pipeline
+###############################################################################
+
+igblast_db: "/opt/igblast/database"
+vdj_db: "/opt/germlines/imgt/human/vdj"
+igphyml_path: "/opt/igphyml/src/igphyml"
+
+pg:
+  db: "bcrdb"
+  user: "postgres_user"
+  password: "postgres_password"
+  host: "localhost"
+
+clonotype_distance: 0.1
+public_min_subjects: 2
+
+release:
+  version: "v1.0"
+  imgt_version: "2024-1"

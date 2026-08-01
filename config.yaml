@@ -1,0 +1,35 @@
+###############################################################################
+# X-BCRdb Snakemake pipeline configuration
+#
+# Copy this file and edit paths before running the workflow.
+# Do not commit passwords or private server paths to a public repository.
+###############################################################################
+
+# Directory containing the IgBLAST database files required by Change-O AssignGenes.
+# Example: /opt/igblast/database
+igblast_db: "/path/to/igblast/database"
+
+# Directory containing IMGT human germline reference FASTA files for Change-O.
+# Example: /opt/germlines/imgt/human/vdj
+vdj_db: "/path/to/imgt/human/vdj"
+
+# Optional. Full path to the IgPhyML executable used by Dowser BuildTrees.
+# Leave empty to let Dowser search PATH.
+igphyml_path: ""
+
+# PostgreSQL connection used by scripts/load_database.py.
+# Required only when running the default `rule all`.
+# For processing without database loading, run `snakemake -s Snakefile.no_db all_no_db`.
+pg:
+  db: "bcrdb"
+  user: "postgres_user"
+  password: "postgres_password"
+  host: "localhost"
+
+# BCR/public clonotype parameters.
+clonotype_distance: 0.1
+public_min_subjects: 2
+
+release:
+  version: "v1.0"
+  imgt_version: "2024-1"

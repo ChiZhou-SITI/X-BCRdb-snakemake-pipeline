@@ -1,0 +1,2 @@
+study	sample_id	source_sample_id	raw_study	raw_count_sample	raw_vdj_sample	count_dir	vdj_fasta
+SLE_Gao_2022	HC_1	HC_1	SLE_Gao_2022	HC_1	HC_1	raw_data/SLE_Gao_2022/HC_1/count/sample_feature_bc_matrix	raw_data/SLE_Gao_2022/HC_1/vdj_b/filtered_contig.fasta
